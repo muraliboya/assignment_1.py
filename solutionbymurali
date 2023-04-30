@@ -1,0 +1,50 @@
+# solution to the first problem
+print('press 1 for Introduction to Python Programming book (Rs.499) ,2 for Python Libraries Cookbook(Rs.855) ,3 for Data Science in Python book(Rs.645)')
+print('If you want to buy multiple books , then give space  and enter the  another value')
+a=[]
+sum=0
+a=list(map(int,input('enter the values').split()))
+for i in a:
+    match i:
+        case 1:
+            b=int(input('enter the quantity of the book1 = '))
+            cost1=499*b
+            sum+=cost1
+    
+            if b == 0:
+                print('enter correct value')
+            
+        case 2:
+            c=int(input('enter the quanty of the book2 ='))       
+            if c == 0:
+                print('enter correct value') 
+            cost2=855*c
+            sum+=cost2
+            
+        case 3:
+            d=int(input('enter the quantity of the book3 ='))      
+            if d==0:
+                print('enter the correct value')
+            cost3=645*c
+            sum+=cost3
+            
+#totalcost=list[0]+list[1]+list[2]
+print('total cost of the books is ',sum)  
+gst=sum*0.12 
+print('including gst the price is',gst)    
+print('Delivery charges are Rs.250.By including the delivery charges the price is ',gst+250)
+
+
+
+
+
+
+#solution to the second problem
+
+a=input('enter the string = ').lower()
+b=''
+for i in a:
+    if i not in b:
+        b=b+i
+        b=b+","
+print(b[0:len(b)-1])
